@@ -14,6 +14,7 @@ public class ExampleApplication {
 		//MyFirstClass myFirstClass = new MyFirstClass();
 		//System.out.println(myFirstClass.sayHello());
 
+		//ctx means ApplicationContext class
 		MyFirstClass myFirstClass = ctx.getBean(MyFirstClass.class);
 		System.out.println(myFirstClass.sayHello());
 
