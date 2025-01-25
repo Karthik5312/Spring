@@ -15,15 +15,18 @@ public class ExampleApplication {
 		//System.out.println(myFirstClass.sayHello());
 
 		//ctx means instance of ApplicationContext class
-		MyFirstClass myFirstClass = ctx.getBean(MyFirstClass.class);
-		System.out.println(myFirstClass.sayHello());
+		//MyFirstClass myFirstClass = ctx.getBean(MyFirstClass.class);
+		//MyFirstClass myFirstClass = ctx.getBean("firstBean", MyFirstClass.class);
+
+		MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
+		System.out.println(myFirstService.tellStory());
 
 
 	}
 
-	@Bean
-	public MyFirstClass myFirstClass() {
-		return new MyFirstClass();
-	}
+	//@Bean
+	//public MyFirstClass myFirstClass() {
+		//return new MyFirstClass();
+	//}
 
 }
