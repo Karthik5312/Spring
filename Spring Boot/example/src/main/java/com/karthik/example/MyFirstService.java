@@ -36,8 +36,7 @@ public class MyFirstService {
 
     //Constructor Injection --> most recommended
     public MyFirstService(
-            //@Qualifier("bean2") MyFirstClass myFirstClass // If no qualifier used then as per Primary that bean works
-            MyFirstClass myFirstClass
+            @Qualifier("bean1") MyFirstClass myFirstClass // If no qualifier used then as per Primary that bean works
     ) {
         this.myFirstClass = myFirstClass;
     }

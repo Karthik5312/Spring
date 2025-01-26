@@ -4,13 +4,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class ApplicationConfig {
 
     //@Bean("firstBean") //By this we can name bean
     @Bean
-    //@Qualifier("bean1")
+    @Profile("dev")
+    @Qualifier("bean1")
     public MyFirstClass myFirstBean() {
         //return new MyFirstClass(); when there was no parameterised constructor used
         return new MyFirstClass("First Bean");
@@ -24,7 +26,7 @@ public class ApplicationConfig {
 
     @Bean
     //@Qualifier("bean3")
-    @Primary
+    //@Primary
     public MyFirstClass myThirdBean() {
         return new MyFirstClass("Third Bean");
     }
