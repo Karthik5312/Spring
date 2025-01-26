@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class ApplicationConfig {
 
-    //@Bean("firstBean") //By this we can name bean
+    //@Bean("firstBean") // By this we can name bean
     @Bean
     @Profile("dev")
     @Qualifier("bean1")

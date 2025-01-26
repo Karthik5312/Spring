@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
-//@PropertySource("classpath:custom.properties")
+// @PropertySource("classpath:custom.properties")
 @PropertySources({
         @PropertySource("classpath:custom.properties"),
         @PropertySource("classpath:custom-2.properties")
